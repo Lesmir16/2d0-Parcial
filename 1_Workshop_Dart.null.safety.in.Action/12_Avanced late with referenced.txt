@@ -1,0 +1,22 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Uso de palabra late como referencia circular
+ */
+
+/*Eje12: Palabra clave late avanzado*/
+class Team{
+  late final Coach coach;
+}
+
+class Coach {
+  late final Team team;
+}
+
+void main(){
+  final myTeam = Team();
+  final myCoach = Coach();
+  myTeam.coach = myCoach;
+  myCoach.team = myTeam;
+  
+  print("All done!");
+}

@@ -1,0 +1,16 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Uso tipo promocion
+ *con excepcion nulos*/
+
+/*Eje8: Tipo Promoción con excepcion nulos*/
+int getLength(String? str){
+  //Intentando excepción "str" siendo nulo.
+  if (str == null){
+    throw "Hey, that string was null";
+  }//no admitiendo valores null
+return str.length;
+}
+void main(){
+  print(getLength(null));
+}

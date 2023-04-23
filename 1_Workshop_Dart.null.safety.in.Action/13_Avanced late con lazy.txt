@@ -1,0 +1,22 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Uso de palabra late con ayuda de lazy expensivo
+ */
+
+/*Eje13: Palabra clave late con inicializador lazy*/
+int _computeValue(){
+  print("In _computeValue...");
+  return 3;
+}
+
+class CachedValueProvider {
+  late final _cache = _computeValue();
+  int get value => _cache;
+}
+
+void main(){
+  print("Calling contructor...");
+  var provider = CachedValueProvider();
+  print("Getting value...");
+  print("The value is ${provider.value}!");
+}

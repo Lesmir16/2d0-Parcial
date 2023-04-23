@@ -1,0 +1,12 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Tipo anulables y no anulables
+ */
+
+/*Eje2: Valores Null 
+ *agregando a variable ?*/
+void main() {
+  int? a;
+  a = null;
+  print('a es $a.');
+}

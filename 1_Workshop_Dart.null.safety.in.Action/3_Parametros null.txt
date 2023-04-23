@@ -1,0 +1,14 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Tipo anulables y no anulables
+ */
+/*Eje3: Parametros Tipo Anulable*/
+void main() {
+  List<String> aListOfStrings = ['one', 'two', 'three'];
+  List<String>? aNullableListOfStrings; //todos los valores son anulables
+  List<String?> aListOfNullableStrings = ['one', null, 'three']; //valores anulables los solicitados
+
+  print('aListOfStrings is $aListOfStrings.');
+  print('aNullableListOfStrings is $aNullableListOfStrings.');
+  print('aListOfNullableStrings is $aListOfNullableStrings.');
+}

@@ -1,0 +1,18 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Uso de palabra late
+ */
+
+/*Eje11: Palabra clave late*/
+class Meal{
+  late String description; //insertando operador de asercion late
+  void setDescription(String str) {
+    description = str;
+  }
+}
+
+void main(){
+  final myMeal = Meal();
+  myMeal.setDescription("Feijoada!");
+  print(myMeal.description);
+}

@@ -1,0 +1,17 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Uso tipo promocion
+ *chequeando valores nulos*/
+
+/*Eje7: Tipo Promoción atraves de chequeo nulos*/
+int getLength(String? str){
+  //Agregando verificación nula
+  if (str == null){
+    return 0;
+  }//si es nula, desaparece
+  return str.length;
+}
+
+void main(){
+  print(getLength("This is a string"));
+}

@@ -1,0 +1,20 @@
+//Ejercicios: Workshop: Dart null safety in Action
+
+/*Operadores de aserciòn nulo (!)
+ *agregado despues de expresiones*/
+
+/*Eje4: Aplicando Aserción nula (!)*/
+int? couldReturnNullButDoesnt() => -3;
+int? couldBeNullButIsnt = 1; //se considerá como valor no anulable
+
+void main() {
+  List<int?> listThatCouldHoldNulls = [2, null, 4];
+
+  int a = couldBeNullButIsnt!;// Puede ser nulo
+  int b = listThatCouldHoldNulls.first!; // primer elemento de la lista es nulo
+  int c = couldReturnNullButDoesnt()!.abs(); // valor absoluto tiene valor de tipo nulo
+
+  print('a es $a.');
+  print('b es $b.');
+  print('c es $c.');
+}
