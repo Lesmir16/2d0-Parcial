@@ -1,0 +1,53 @@
+//Ejercicios: Codelab: Concepto Basicos de Diseño Flutter
+
+/*Wdget Cuadro de Tamaño
+ * cambia tamaño del widget usando propiedades height y width
+ * Cambiando tamaño de un Widget*/
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyWidget()
+    );
+    throw UnimplementedError();
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        BlueBox(),
+        SizedBox(
+          width: 100,
+          height: 100,
+          child: BlueBox(),
+        ),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}

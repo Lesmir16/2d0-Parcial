@@ -1,0 +1,61 @@
+//Ejercicios: Codelab: Concepto Basicos de Diseño Flutter
+
+/*Widget de Espaciador 
+ * Crea espacio usando Spacer Widget
+ * Creando Espacio agregando SizedBox widget entre 2 y 3er
+ * BlueBox Widget*/
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyWidget()
+    );
+    throw UnimplementedError();
+  }
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyWidget()
+    );
+    throw UnimplementedError();
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        const Spacer(flex: 1),
+        BlueBox(),
+        const Spacer(flex: 1),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}

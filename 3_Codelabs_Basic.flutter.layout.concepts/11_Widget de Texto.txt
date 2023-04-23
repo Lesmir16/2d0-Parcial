@@ -1,0 +1,58 @@
+//Ejercicios: Codelab: Concepto Basicos de Diseño Flutter
+
+/*Widget de Texto 
+ * Se muestra texto y se puede configurar mediante 
+ * este fuentes, tamaños y colores
+ * Alinear Texto con CrossAxisAligment.baseline*/
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyWidget()
+    );
+    throw UnimplementedError();
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      textBaseline: TextBaseline.alphabetic,
+      children: const [
+        Text(
+          'Hey!',
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: 'Futura',
+            color: Colors.blue,
+          ),
+        ),
+        Text(
+          'Hey!',
+          style: TextStyle(
+            fontSize: 50,
+            fontFamily: 'Futura',
+            color: Colors.green,
+          ),
+        ),
+        Text(
+          'Hey!',
+          style: TextStyle(
+            fontSize: 40,
+            fontFamily: 'Futura',
+            color: Colors.red,
+          ),
+        ),
+      ],
+    );
+  }
+}

@@ -1,0 +1,34 @@
+//Ejercicios: Codelab: Concepto Basicos de Diseño Flutter
+
+/*Widget de Imagen
+ * Muestra Imagen ya sea mediante referencia URL o dentro 
+ * del paquete de la aplicación.
+ * Mostrando imagen de URL*/
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyWidget()
+    );
+    throw UnimplementedError();
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.network('https://raw.githubusercontent.com/flutter/website/main/examples/layout/sizing/images/pic1.jpg'),
+      ],
+    );
+  }
+}

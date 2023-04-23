@@ -1,0 +1,50 @@
+//Ejercicios: Codelab: Concepto Basicos de Diseño Flutter
+
+/*Wdget Cuadro de Tamaño (2)
+ * Creando Espacio agregando SizedBox widget entre 2 y 3er
+ * BlueBox Widget*/
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyWidget()
+    );
+    throw UnimplementedError();
+  }
+}
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        BlueBox(),
+        const SizedBox(width: 50),
+        BlueBox(),
+        const SizedBox(width: 50),
+        BlueBox(),
+      ],
+    );
+  }
+}
+
+class BlueBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        border: Border.all(),
+      ),
+    );
+  }
+}
